@@ -1,0 +1,18 @@
+{
+    "name": "estaduardo/bienesraices_inicio",
+    "description": "Proyecto bienes raices con POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Kevin Sarria"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr4": {
+            "App\\": "./clases"
+        }
+    }
+}
