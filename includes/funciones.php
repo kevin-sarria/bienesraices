@@ -12,22 +12,26 @@ function incluirTemplate( string $nombre, bool $inicio = false ) {
 }
 
 function estadoAutenticado(): void {
+    
     session_start();
 
-
     if(!$_SESSION['login']) {
-        header('location: /');
+        header('location: /bienesraices_inicio');
     }
 
 }
 
-function debbugear($variable) {
+function debuguear($variable) {
     echo "<pre>";
     var_dump($variable);
     echo "</pre>";
     exit;
 }
 
-
+// Escapar / Sanitizar el HTML
+function s($html) {
+    $s = htmlspecialchars($html);
+    return $s;
+}
 
 
