@@ -13,7 +13,7 @@ require '../../includes/app.php';
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     if(!$id) {
-        header('location: /bienesraices_inicio/admin');
+        header('location: /admin');
     }
 
     // Consulta para obtener todos los vendedores
@@ -21,11 +21,6 @@ require '../../includes/app.php';
 
     // Obtener los datos de la propiedad
     $propiedad = Propiedad::find($id);
-
-    // Consultar para obtener los vendedores
-    $consulta = "SELECT * FROM vendedores";
-    $resulado = mysqli_query($db, $consulta);
-
 
     // Arreglo con mensajes de errores
     $errores = Propiedad::getErrores();

@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['usuario'] = $usuario['email'];
                 $_SESSION['login'] = true;
 
-                header('location: /bienesraices_inicio/admin/index.php');
+                header('location: /admin/index.php');
                 
 
             }else {
